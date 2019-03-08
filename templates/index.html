@@ -2,34 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>INDIAN BANKS DETAILS</title>
+    <title>Indian Banks Service Portal</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
 </head>
 <body>
     <div class="container">
         <div class="container">
-
-            <br>
-
-            <form method="POST">
-
-                <label for="name">Bank Name</label>
-                <div class="form-row">
-                    <input class="form-control" type="text" placeholder="Name of Bank" id="name" name="name">
-                </div>
-                <br>
-                <div class="form-row">
-                    <label for="city">Author</label>
-                    <input class="form-control" type="text" placeholder="City" id="city" name="city">
-                </div>
-                <br>
-
-                <br>
-                <button type="submit " class="btn btn-primary " style="float:right ">Find Branches</button>
-
-            </form>
             <br><br>
+            <div class="row">
+                <div style="width: 50%">
+                    <form method="POST" style="width: 80%;">
+                        <div class="form-row">
+                            <input class="form-control" type="text" placeholder="IFSC Code" id="ifsc" name="ifsc">
+                        </div>
+
+                        <br>
+                        <button type="submit " class="btn btn-primary " style="float:right ">Find Bank Details</button>
+
+                    </form>
+                </div>
+                <div style="width: 50%">
+                    <form method="POST" style="width: 80%">
+
+                        <div class="form-row">
+                            <input class="form-control" type="text" placeholder="Bank Name" id="name" name="name">
+                        </div>
+                        <br>
+                        <div class="form-row">
+                            <input class="form-control" type="text" placeholder="City" id="city" name="city">
+                        </div>
+                        <br>
+                        <button type="submit " class="btn btn-primary " style="float:right ">Find Branches</button>
+
+                    </form>
+                </div>
+            <br><br>
+        </div>
+        <hr>
+        <div>
+            {{ result }}
         </div>
     </div>
 
