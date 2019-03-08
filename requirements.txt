@@ -11,7 +11,6 @@ ipaddress==1.0.17
 keyring==10.6.0
 keyrings.alt==3.0
 lxml==4.2.1
-mercurial==4.5.3
 mixpanel==4.3.2
 nltk==3.3
 numpy==1.14.3
