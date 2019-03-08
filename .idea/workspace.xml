@@ -28,8 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../fyle-sonaksh/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+            <state relative-caret-position="150">
+              <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -390,16 +390,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1551974762806</updated>
-      <workItem from="1551974764862" duration="20121000" />
+      <workItem from="1551974764862" duration="20433000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20121000" />
+    <option name="totallyTimeSpent" value="20433000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="22" width="1311" height="746" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7832512" visible="true" weight="0.19245876" />
       <window_info id="Favorites" order="1" sideWeight="0.21674877" side_tool="true" weight="0.25533596" />
@@ -597,8 +596,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../fyle-sonaksh/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        <state relative-caret-position="150">
+          <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
         </state>
       </provider>
     </entry>
