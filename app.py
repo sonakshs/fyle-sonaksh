@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_sqlalchemy import SQLAlchemy
 import os
 
@@ -11,9 +11,24 @@ db = SQLAlchemy(app)
 
 
 
-@app.route("/")
+@app.route("/", methods=['GET','POST'])
 def hello():
-    return "Hello World!"
+    if request.method == 'POST':
+        city = request.form.get('city')
+        name = request.form.get('name')
+        if city and name:
+            from models.branches import Branches
+            from models.banks import Banks
+            try:
+                bank = Banks.query.filter_by(name=name).first()
+                if not bank:
+                    return "Invalid request"
+                bank_id = bank.id
+                branches = Branches.query.filter_by(bank_id=bank_id, city=city)
+                return jsonify([branch.to_dict() for branch in branches])
+            except Exception as e:
+                return (str(e))
+    return render_template("index.html")
 
 
 @app.route("/getall")

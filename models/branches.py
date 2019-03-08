@@ -4,7 +4,7 @@ from sqlalchemy import ForeignKey, BigInteger
 
 class Branches(db.Model):
     __tablename__ = 'branches'
-
+    id = db.Column(BigInteger, primary_key=True, autoincrement=True)
     ifsc = db.Column(db.String(11), primary_key=True, nullable=False)
     bank_id = db.Column(BigInteger, ForeignKey("banks.id"))
     branch = db.Column(db.String(74))
