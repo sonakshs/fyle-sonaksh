@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, render_template, json
 from flask_sqlalchemy import SQLAlchemy
 import os
 
@@ -24,8 +24,8 @@ def hello():
                 if not bank:
                     return "Invalid request"
                 bank_id = bank.id
-                branches = Branches.query.filter_by(bank_id=bank_id, city=city.upper())
-                if branches:
+                branches = Branches.query.filter_by(bank_id=bank_id, city=city.upper()).all()
+                if len(branches) > 0:
                     result = ([branch.to_dict() for branch in branches])
                 else:
                     result = "No data found"
@@ -36,15 +36,13 @@ def hello():
             try:
                 branch = Branches.query.filter_by(ifsc=ifsc.upper()).first()
                 if branch:
-                    result = branch.to_dict()
+                    result = [branch.to_dict()]
                 else:
                     result = "No data found"
             except Exception as e:
                 result = (str(e))
-        return render_template('index.html', result=result)
-
+        return render_template('index.html', result=json.dumps(result, sort_keys=False, indent=2))
     return render_template("index.html")
-
 
 if __name__ == '__main__':
     app.run()

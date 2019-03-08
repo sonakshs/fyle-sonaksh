@@ -41,7 +41,10 @@
         </div>
         <hr>
         <div>
-            {{ result }}
+            {% if result %}
+               <pre>{{ result }}</pre>
+            {% endif %}
+
         </div>
     </div>
 
