@@ -9,7 +9,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 
-@app.route("/", methods=['GET','POST'])
+@app.route("/", methods=['GET', 'POST'])
 def hello():
     if request.method == 'POST':
         city = request.form.get('city')
@@ -43,6 +43,7 @@ def hello():
                 result = (str(e))
         return render_template('index.html', result=json.dumps(result, sort_keys=False, indent=2))
     return render_template("index.html")
+
 
 if __name__ == '__main__':
     app.run()
